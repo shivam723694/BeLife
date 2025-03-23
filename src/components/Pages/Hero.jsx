@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { FaHome, FaCity, FaTruck } from "react-icons/fa";
 import banner from "../Pages/ourClinics/banner_bg.jpg";
 
 export default function HealthcareSection() {
+  const [showAppointmentForm, setShowAppointmentForm] = useState(false);
+
+  const toggleAppointmentForm = () => {
+    setShowAppointmentForm(!showAppointmentForm);
+  };
+
   return (
     <div className="relative bg-sky-50 min-h-screen flex items-center justify-center py-20 overflow-hidden">
       {/* Background decorations */}
@@ -17,15 +24,18 @@ export default function HealthcareSection() {
           <div className="md:w-1/2 z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-stone-600">We Are Ready to Help, </span>
-              <span className="text-sky-400">Your Health Problems</span>
+              <span className="text-sky-400">BeLife Health Problems</span>
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 mb-8">
-              Avail the best healthcare and top-quality{" "}
+              Avail the best BeLife healthcare and top-quality{" "}
               <span className="text-sky-400 font-medium">diagnostic services.</span>
             </p>
             
-            <button className="bg-stone-600 hover:bg-stone-700 text-white rounded-full px-8 py-4 font-medium transition-all duration-300 shadow-lg hover:shadow-xl mb-12">
+            <button 
+              onClick={toggleAppointmentForm}
+              className="bg-stone-600 hover:bg-stone-700 text-white rounded-full px-8 py-4 font-medium transition-all duration-300 shadow-lg hover:shadow-xl mb-12"
+            >
               Book Appointment
             </button>
             
@@ -74,6 +84,70 @@ export default function HealthcareSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
         </svg>
       </button>
+
+      {/* Appointment Form Modal */}
+      {showAppointmentForm && (
+        <div className="fixed inset-0  bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full relative">
+            {/* Close button */}
+            <button 
+              onClick={toggleAppointmentForm}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+
+            {/* Form content */}
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-800">Looking for Advanced, Human-Grade Care Health Care BeLife</h2>
+            </div>
+
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-gray-700 mb-2">Your Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  placeholder="Fullname" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-gray-700 mb-2">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  placeholder="Phone Number" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <button 
+                type="submit" 
+                className="w-full bg-gray-800 text-white py-3 rounded-md font-medium flex items-center justify-center space-x-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span>Book Appointment</span>
+              </button>
+
+              <div className="text-center text-sm text-gray-600">
+                <div className="flex items-center justify-center">
+                  <span className="text-yellow-500">★</span>
+                  <span className="ml-1">4.9</span>
+                  <span className="mx-2">in</span>
+                  <span className="text-blue-600">G</span>
+                  <span className="ml-2">Ratings | 125K+ Happy BeLIfe </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

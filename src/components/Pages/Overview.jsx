@@ -3,7 +3,7 @@ import React from 'react'
 const Overview = () => {
   return (
     <div>
-         <section className="bg-gray-50 py-16 px-6 text-center">
+         <section className="bg-sky-50 py-16 px-6 text-center">
       <h3 className="text-blue-600 font-semibold text-lg">Overview</h3>
       <h2 className="text-gray-900 font-bold text-2xl md:text-3xl mt-2">
         Welcome to BeLife

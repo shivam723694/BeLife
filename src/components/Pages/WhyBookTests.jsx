@@ -66,8 +66,8 @@ const WhyBookTests = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-100 py-10 px-4 rounded-lg my-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full rounded-3xl  bg-sky-50 py-10 px-4 rounded-lg my-8">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-6">
           <h2 className="text-3xl font-bold text-slate-800">
             Why <span className="text-blue-800">Book Tests</span> With us ?

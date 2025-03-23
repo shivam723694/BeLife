@@ -7,6 +7,7 @@ import About from "./src/components/Pages/About";
 import Contact from "./src/components/Pages/Contact";
 import Services from "./src/components/Pages/Services";
 import OurClinics from "./src/components/Pages/OurClinics";
+import Packages from "./src/components/Pages/Packages";
 
 // Clinic location pages - assuming these will be created later
 
@@ -17,6 +18,7 @@ import DelhiClinic from "./src/components/Pages/ourClinics/DelhiClinic";
 import AgraClinic from "./src/components/Pages/ourClinics/AgraClinic";
 import FaridabadClinic from "./src/components/Pages/ourClinics/FaridabadClinic";
 import HaryanaClinic from "./src/components/Pages/ourClinics/HaryanaClinic";
+import Ghaziyabad from "./src/components/Pages/ourClinics/Ghaziyabad";
 
 /**
  * Application router configuration
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "packages",
+        element: <Packages />
+      },
+      {
         path: "services",
         element: <Services />,
       },
@@ -63,6 +69,10 @@ const router = createBrowserRouter([
           {
             path: "faridabad",
             element: <FaridabadClinic />
+          },
+          {
+            path: "gazhaiybad",
+            element: <Ghaziyabad/>
           },
           {
             path: "haryana",

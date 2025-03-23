@@ -27,6 +27,7 @@ const HeaderAndNavbar = () => {
     { title: "Home", link: "/", hasDropdown: false },
     { title: "About Us", link: "/about", hasDropdown: false },
     { title: "Our Clinics", link: "/our-clinics", hasDropdown: true },
+    { title: "Packages", link: "/packages", hasDropdown: false },
     { title: "Our Services", link: "/services", hasDropdown: false },
     { title: "Contact Us", link: "/contact", hasDropdown: false }
 ];

@@ -4,7 +4,7 @@ import { BsCardChecklist } from 'react-icons/bs';
 
 function ServicesCards() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-sky-50 ">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 mb-8 md:mb-0">
@@ -26,7 +26,7 @@ function ServicesCards() {
         <div className="md:w-1/2">
           <div className="bg-gray-100 rounded-diamond p-4">
             <img 
-              src="https://placehold.co/400x400" 
+              src="https://onepluslab.com/wp-content/uploads/2024/10/collection.png" 
               alt="Healthcare Professional" 
               className="w-full"
             />

@@ -1,4 +1,3 @@
-// components/HealthPackages.jsx
 import React, { useState, useRef } from 'react';
 
 const HealthPackages = () => {
@@ -77,7 +76,6 @@ const HealthPackages = () => {
   };
 
   const handleBookNow = (packageId) => {
-    // In a real application, this would redirect to a booking page or open a booking modal
     alert(`Booking package #${packageId}`);
   };
 
@@ -103,12 +101,12 @@ const HealthPackages = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 ">
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-bold text-stone-600">Top Health Packages</h2>
-        <div className="flex gap-2">
+      <div className="flex items-center justify-between mb-8 bg-sky-50">
+        <h2 className="text-2xl font-bold text-gray-800">Top Health Packages</h2>
+        <div className="flex gap-2 " >
           <button 
             onClick={scrollLeft}
-            className={`w-8 h-8 flex items-center justify-center rounded-full ${currentIndex === 0 ? 'bg-gray-200 text-gray-400' : 'bg-gray-200 text-stone-600 hover:bg-gray-300'}`}
+            className={`w-8 h-8 flex items-center justify-center rounded-full ${currentIndex === 0 ? 'bg-gray-200 text-gray-400' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
             disabled={currentIndex === 0}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -117,7 +115,7 @@ const HealthPackages = () => {
           </button>
           <button 
             onClick={scrollRight}
-            className={`w-8 h-8 flex items-center justify-center rounded-full ${currentIndex >= packages.length - 4 ? 'bg-gray-200 text-gray-400' : 'bg-sky-400 text-white hover:bg-sky-500'}`}
+            className={`w-8 h-8 flex items-center justify-center rounded-full ${currentIndex >= packages.length - 4 ? 'bg-gray-200 text-gray-400' : 'bg-gradient-to-r from-blue-400 to-blue-600 text-white hover:from-blue-500 hover:to-blue-700'}`}
             disabled={currentIndex >= packages.length - 4}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -136,10 +134,10 @@ const HealthPackages = () => {
           <div key={pkg.id} className="flex-shrink-0 w-full max-w-xs border rounded-lg shadow-sm overflow-hidden bg-white">
             <div className="p-5 border-b">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-rose-500 pr-6">{pkg.title}</h3>
+                <h3 className="text-xl font-bold text-blue-600 pr-6">{pkg.title}</h3>
                 <button 
                   onClick={() => togglePackageDetails(pkg.id)}
-                  className="text-stone-400 hover:text-stone-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
                 >
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -154,25 +152,24 @@ const HealthPackages = () => {
                 </button>
               </div>
               
-              <div className="flex text-stone-500 text-sm mb-4">
+              <div className="flex text-gray-500 text-sm mb-4">
                 <div className="flex items-center mr-4">
                   <span>Reports in</span>
-                  <span className="font-semibold text-stone-600 ml-2">{pkg.reportTime}</span>
+                  <span className="font-semibold text-gray-600 ml-2">{pkg.reportTime}</span>
                 </div>
                 <div className="flex items-center">
                   <span className="mx-2">|</span>
                   <span>Parameters</span>
-                  <span className="font-semibold text-stone-600 ml-2">{pkg.parameters}</span>
+                  <span className="font-semibold text-gray-600 ml-2">{pkg.parameters}</span>
                 </div>
               </div>
 
               {pkg.description && (
-                <p className="text-stone-600 mb-4">{pkg.description}</p>
+                <p className="text-gray-600 mb-4">{pkg.description}</p>
               )}
 
-              {/* Additional details shown only when expanded */}
               <div className={`transition-all duration-300 overflow-hidden ${expandedPackages[pkg.id] ? 'max-h-96 opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
-                <div className="mt-2 text-stone-600">
+                <div className="mt-2 text-gray-600">
                   <h4 className="font-semibold mb-2">What's included:</h4>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>Complete blood count</li>
@@ -189,7 +186,7 @@ const HealthPackages = () => {
               {pkg.categories && (
                 <div className="flex flex-wrap gap-2 mb-2">
                   {pkg.categories.map((category, index) => (
-                    <span key={index} className="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm">
+                    <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
                       {category}
                     </span>
                   ))}
@@ -197,13 +194,13 @@ const HealthPackages = () => {
               )}
             </div>
 
-            <div className="p-5 bg-sky-50 flex items-center justify-between">
+            <div className="p-5 bg-blue-50 flex items-center justify-between">
               <div>
                 <div className="flex items-center">
-                  <span className="text-2xl font-bold text-stone-800">₹{pkg.price}</span>
-                  <span className="text-stone-500 line-through ml-2 text-sm">₹{pkg.originalPrice}</span>
+                  <span className="text-2xl font-bold text-gray-800">₹{pkg.price}</span>
+                  <span className="text-gray-500 line-through ml-2 text-sm">₹{pkg.originalPrice}</span>
                 </div>
-                <div className="text-sm text-stone-600">
+                <div className="text-sm text-gray-600">
                   <span className="font-medium">{pkg.discountPercentage}% off</span>
                   <br />
                   <span>for a limited period</span>
@@ -211,7 +208,7 @@ const HealthPackages = () => {
               </div>
               <button 
                 onClick={() => handleBookNow(pkg.id)}
-                className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-md hover:bg-rose-600 transition-colors"
+                className="px-8 py-3 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-md hover:from-pink-600 hover:to-red-700 transition-colors"
               >
                 Book
               </button>

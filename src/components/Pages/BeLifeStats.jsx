@@ -83,8 +83,8 @@ const BeLifeStats = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-sky-50 py-12 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-stone-700 mb-2">
             <span className="text-rose-500">BeLife Labs</span> - <span className="text-sky-600">Healthy India ki Trusted Lab</span>

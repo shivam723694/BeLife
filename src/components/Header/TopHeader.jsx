@@ -46,6 +46,7 @@ export default function Navbar() {
     setDropdownOpen(false);
     setMobileDropdownOpen(false);
   }, [location.pathname]);
+  
 
   return (
     <nav className="relative bg-gradient-to-r from-white to-pink-50 shadow-lg">

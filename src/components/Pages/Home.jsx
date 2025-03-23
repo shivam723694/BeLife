@@ -6,33 +6,23 @@ import HealthPackages from './HealthPackages'
 import WhyBookTests from './WhyBookTests'
 import BeLifeStats from './BeLifeStats'
 import ServicesCards from './cards/ServicesCards'
+import AppointmentForm from './AppointmentForm'
+import HealthcareBanner from '../banner/HealthcareBanner'
 
 const Home = () => {
-  return (
-    <div>
-       {/* <HealthSlider /> */}
-       <Hero />
-       <HealthPackages />
-       <Overview />
-       <ServicesCards />
+    return (
+        <div>
+            {/* <HealthSlider /> */}
+            <HealthcareBanner />
+            <Hero />
+            <HealthPackages />
+            <Overview />
+            <ServicesCards />
+            <BeLifeStats />
+            <WhyBookTests />
 
-
-
-
-    
-
-       
-       
-       
-       <BeLifeStats />
-
-
-
-
-       <WhyBookTests />
-      
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Home

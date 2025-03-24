@@ -19,6 +19,7 @@ import AgraClinic from "./src/components/Pages/ourClinics/AgraClinic";
 import FaridabadClinic from "./src/components/Pages/ourClinics/FaridabadClinic";
 import HaryanaClinic from "./src/components/Pages/ourClinics/HaryanaClinic";
 import Ghaziyabad from "./src/components/Pages/ourClinics/Ghaziyabad";
+import Gallery from "./src/components/Pages/Gallery";
 
 /**
  * Application router configuration
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         path: "packages",
         element: <Packages />
       },
+      {
+        path: "gallery",
+        element: <Gallery />
+      },
+
       {
         path: "services",
         element: <Services />,

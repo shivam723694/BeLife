@@ -144,30 +144,33 @@ export default function HealthCheckupCarousel() {
 
       {/* Package Cards */}
       <div ref={carouselRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {currentPackages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow"
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-900 mr-4">
-                {/* {PackageIcons[pkg.type] && <PackageIcons[pkg.type] />} */}
+        {currentPackages.map((pkg) => {
+          const Icon = PackageIcons[pkg.type];
+          return (
+            <div
+              key={pkg.id}
+              className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-900 mr-4">
+                  {Icon && <Icon />}
+                </div>
+                <div>
+                  <h3 className="font-medium text-blue-900">{pkg.name}</h3>
+                  <p className="text-sm text-gray-500">{pkg.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-medium text-blue-900">{pkg.name}</h3>
-                <p className="text-sm text-gray-500">{pkg.description}</p>
+              <div className="mt-4">
+                <span className="inline-block bg-blue-50 text-blue-900 px-3 py-1 rounded-full text-sm font-medium">
+                  View Details
+                </span>
               </div>
             </div>
-            <div className="mt-4">
-              <span className="inline-block bg-blue-50 text-blue-900 px-3 py-1 rounded-full text-sm font-medium">
-                View Details
-              </span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Pagination Dots (Optional) */}
+      {/* Pagination Dots */}
       {totalPages > 1 && (
         <div className="flex justify-center mt-6 space-x-2">
           {[...Array(totalPages)].map((_, index) => (

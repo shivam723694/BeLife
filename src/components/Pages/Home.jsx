@@ -10,6 +10,7 @@ import HealthcareBanner from '../banner/HealthcareBanner'
 import NABLBadge from './Nabl'
 import HealthCheckupCarousel from './PackageIcons'
 import MedicalServices from './MedicalServices'
+import ServicesSection from './ServicesSection'
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             <Hero />
             <HealthCheckupCarousel />
             <HealthcareBanner />
+            <ServicesSection />
             
             <HealthPackages />
             <ServicesCards />

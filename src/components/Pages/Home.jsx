@@ -1,23 +1,29 @@
 import React from 'react'
 import HealthSlider from '../slider/HealthSlider'
 import Hero from './Hero'
-import Overview from './Overview'
 import HealthPackages from './HealthPackages'
 import WhyBookTests from './WhyBookTests'
 import BeLifeStats from './BeLifeStats'
 import ServicesCards from './cards/ServicesCards'
 import AppointmentForm from './AppointmentForm'
 import HealthcareBanner from '../banner/HealthcareBanner'
+import NABLBadge from './Nabl'
+import HealthCheckupCarousel from './PackageIcons'
+import MedicalServices from './MedicalServices'
+
 
 const Home = () => {
     return (
         <div>
             {/* <HealthSlider /> */}
-            <HealthcareBanner />
+            <NABLBadge />
             <Hero />
+            <HealthCheckupCarousel />
+            <HealthcareBanner />
+            
             <HealthPackages />
-            <Overview />
             <ServicesCards />
+            <MedicalServices />
             <BeLifeStats />
             <WhyBookTests />
 

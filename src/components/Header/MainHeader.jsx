@@ -64,7 +64,7 @@ const HeaderAndNavbar = () => {
             <div className="flex flex-col items-center md:items-start">
               <Link to="/">
                 {/* If you have the logo as an image */}
-                <img src={logo} alt="BeLife Logo" className="h-16" />
+                <img src={logo} alt="BeLife Logo" className="h-20" />
                 
              
               </Link>

@@ -1,4 +1,7 @@
 import React from 'react'
+import logo from "../Header/logo.png"
+import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
   return (
@@ -7,7 +10,18 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Fifty One Plus Labs</h3>
+              {/* <h3 className="text-xl font-bold mb-4">Fifty One Plus Labs</h3> */}
+              <span>
+                 <div className="flex flex-col items-center md:items-start">
+                             <Link to="/">
+                               {/* If you have the logo as an image */}
+                               <img src={logo} alt="BeLife Logo" className="h-20" />
+                               
+                            
+                             </Link>
+                             {/* <p className="text-gray-700 mt-1">caring for your furry family</p> */}
+                           </div>
+              </span>
               <p className="mb-4">Providing advanced diagnostic services with care and precision since 2010.</p>
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-blue-300 transition">

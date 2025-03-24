@@ -10,7 +10,7 @@ export default function HealthcareSection() {
   };
 
   return (
-    <div className="relative bg-sky-50 min-h-screen flex items-center justify-center py-20 overflow-hidden">
+    <div className="relative bg-sky-50 flex items-center justify-center py-10 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 text-sky-300 text-4xl">★</div>
       <div className="absolute top-48 left-8 text-sky-300 text-2xl">★</div>
@@ -18,7 +18,7 @@ export default function HealthcareSection() {
       <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full bg-rose-200 opacity-40"></div>
       <div className="absolute top-20 -right-20 w-60 h-60 rounded-full bg-rose-200 opacity-30"></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-15  ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left content */}
           <div className="md:w-1/2 z-10">

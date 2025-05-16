@@ -20,7 +20,7 @@ const Home = () => {
             <NABLBadge />
             <Hero />
             <HealthCheckupCarousel />
-            <HealthcareBanner />
+            {/* <HealthcareBanner /> */}
             <ServicesSection />
             
             <HealthPackages />

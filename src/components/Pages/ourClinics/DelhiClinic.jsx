@@ -6,6 +6,7 @@ const DelhiClinic = () => {
     <div>
       <AllClinicBanner location="New Delhi" />
 
+
       
     </div>
   )

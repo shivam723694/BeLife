@@ -10,20 +10,20 @@ const HeaderAndNavbar = () => {
   const dropdownRef = useRef(null);
   const location = useLocation();
   
-  const clinicLocations = [
-    { name: "Delhi", link: "/our-clinics/delhi" },
-    { name: "Noida", link: "/our-clinics/noida" },
-    { name: "Ghaziabad", link: "/our-clinics/ghaziabad" },
-    { name: "Agra", link: "/our-clinics/agra" },
-    { name: "Faridabad", link: "/our-clinics/faridabad" },
-    { name: "Haryana", link: "/our-clinics/haryana" },
-    { name: "Gurugram", link: "/our-clinics/gurugram" },
-  ];
+  // const clinicLocations = [
+  //   { name: "Delhi", link: "/our-clinics/delhi" },
+  //   { name: "Noida", link: "/our-clinics/noida" },
+  //   { name: "Ghaziabad", link: "/our-clinics/ghaziabad" },
+  //   { name: "Agra", link: "/our-clinics/agra" },
+  //   { name: "Faridabad", link: "/our-clinics/faridabad" },
+  //   { name: "Haryana", link: "/our-clinics/haryana" },
+  //   { name: "Gurugram", link: "/our-clinics/gurugram" },
+  // ];
   
   const menuItems = [
     { title: "HOME", link: "/", hasDropdown: false },
     { title: "ABOUT US", link: "/about", hasDropdown: false },
-    { title: "LOCATION", link: "/our-clinics", hasDropdown: true },
+    { title: "LAB LOCATIONS", link: "/our-clinics", hasDropdown: false },
     { title: "PACKAGES", link: "/packages", hasDropdown: false },
     { title: "OUR SERVICES", link: "/services", hasDropdown: false },
     { title: "GALLERY", link: "/gallery", hasDropdown: false },
@@ -53,7 +53,7 @@ const HeaderAndNavbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* Top Header Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 px-4">
+      <div className="bg-sky-400 text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm">
@@ -64,7 +64,7 @@ const HeaderAndNavbar = () => {
             
             <div className="flex items-center">
               <Mail size={14} className="mr-2" />
-              <span>belife@gmail.com</span>
+              <span>belifeasia@gmail.com</span>
             </div>
             
             <div className="flex items-center">
@@ -111,9 +111,7 @@ const HeaderAndNavbar = () => {
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
                     <span>{item.title}</span>
-                    <span className="ml-1">
-                      {dropdownOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                    </span>
+                   
                   </div>
                 ) : (
                   <NavLink
@@ -130,7 +128,7 @@ const HeaderAndNavbar = () => {
                   </NavLink>
                 )}
                 
-                {item.hasDropdown && dropdownOpen && (
+                {/* {item.hasDropdown && dropdownOpen && (
                   <div className="absolute z-20 left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-gray-200 py-1">
                     {clinicLocations.map((location, locIndex) => (
                       <Link
@@ -143,7 +141,7 @@ const HeaderAndNavbar = () => {
                       </Link>
                     ))}
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </nav>
@@ -205,7 +203,7 @@ const HeaderAndNavbar = () => {
                   </NavLink>
                 )}
                 
-                {item.hasDropdown && mobileDropdownOpen && (
+                {/* {item.hasDropdown && mobileDropdownOpen && (
                   <div className="pl-4 mt-1 space-y-1">
                     {clinicLocations.map((location, locIndex) => (
                       <Link
@@ -221,7 +219,7 @@ const HeaderAndNavbar = () => {
                       </Link>
                     ))}
                   </div>
-                )}
+                )} */}
               </div>
             ))}
             
